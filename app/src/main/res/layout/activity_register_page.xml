@@ -8,20 +8,11 @@
     android:orientation="vertical"
     tools:context=".registerPage">
 
-    <TextView
-        android:id="@+id/bluejackTitlecard"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Blue Jack Pharmacy"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:paddingLeft="12sp"
-        android:paddingRight="12sp"
-        android:paddingTop="90sp"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="90dp" />
+        android:layout_height="154dp"
+        app:srcCompat="@drawable/bluejack" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/registerContainer"

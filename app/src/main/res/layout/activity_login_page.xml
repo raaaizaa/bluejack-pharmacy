@@ -8,21 +8,11 @@
     android:orientation="vertical"
     tools:context=".loginPage">
 
-    <TextView
-        android:id="@+id/bluejackTitlecard"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Blue Jack Pharmacy"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:paddingLeft="12sp"
-        android:paddingRight="12sp"
-        android:paddingTop="90sp"
-        android:paddingBottom="40sp"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="90dp" />
+        android:layout_height="221dp"
+        app:srcCompat="@drawable/bluejack" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/loginContainer"
@@ -51,6 +41,7 @@
                 android:textSize="28dp" />
 
             <EditText
+                android:id="@+id/loginEmailField"
                 android:layout_width="288dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="18dp"
@@ -59,7 +50,7 @@
 
 
             <EditText
-                android:id="@+id/registerPassword"
+                android:id="@+id/loginPasswordField"
                 android:layout_width="288dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
@@ -68,7 +59,7 @@
                 android:padding="12dp" />
 
             <Button
-                android:id="@+id/registerButton"
+                android:id="@+id/loginButton"
                 android:layout_width="140dp"
                 android:layout_marginTop="16dp"
                 android:layout_height="wrap_content"

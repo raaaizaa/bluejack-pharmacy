@@ -14,13 +14,15 @@ import android.widget.Toast;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class registerPage extends AppCompatActivity {
     private Button goToLogin, register;
     private EditText name, email, pass, confirmPass, phoneNumber;
-    Integer id = 1;
+
+    Integer id = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,7 @@ public class registerPage extends AppCompatActivity {
 
             if(inputtedName.equals("") || inputtedEmail.equals("") || inputtedPass.equals("") || inputtedConfirmPass.equals("") || inputtedPhone.equals("")){
                 Toast.makeText(this, "All fields must be filled!", Toast.LENGTH_SHORT).show();
-            }else if(inputtedName.length() != 5){
+            }else if(inputtedName.length() < 5){
                 Toast.makeText(this, "Name length must be at least 5 characters!", Toast.LENGTH_SHORT).show();
             }else if(!Patterns.EMAIL_ADDRESS.matcher(inputtedEmail).matches()){
                 Toast.makeText(this, "Enter a valid email address!", Toast.LENGTH_SHORT).show();
@@ -64,9 +66,11 @@ public class registerPage extends AppCompatActivity {
                 Toast.makeText(this, "Your phone number is not a valid phone number!", Toast.LENGTH_SHORT).show();
             }else{
                 id++;
-                saveToTextFile(id, inputtedName, inputtedEmail, inputtedPass, inputtedPhone);
-            }
+                user.addUser(id, inputtedName, inputtedEmail, inputtedPass, inputtedPhone);
+                Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
 
+                openLoginPage();
+            }
         });
     }
 
@@ -83,18 +87,4 @@ public class registerPage extends AppCompatActivity {
         return m.matches();
     }
 
-    public void saveToTextFile(Integer id, String name, String email, String password, String phoneNumber){
-
-        try {
-            FileWriter Writer = new FileWriter("user-information.txt", true);
-            BufferedWriter Buffered = new BufferedWriter(Writer);
-
-            Buffered.write(id + name + email + password + phoneNumber);
-            Buffered.newLine();
-            Buffered.close();
-            Writer.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
