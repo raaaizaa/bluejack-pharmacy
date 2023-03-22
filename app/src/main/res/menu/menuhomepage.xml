@@ -18,6 +18,7 @@
         app:showAsAction="never"/>
 
     <item
+        android:id="@+id/toolbar"
         android:title="Transaction"
         app:showAsAction="always"
         android:icon="@drawable/baseline_shopping_cart_24" />

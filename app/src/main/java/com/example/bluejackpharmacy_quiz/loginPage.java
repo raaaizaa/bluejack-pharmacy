@@ -16,6 +16,13 @@ public class loginPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
@@ -43,6 +50,9 @@ public class loginPage extends AppCompatActivity {
                 Toast.makeText(this, "Account is not available!", Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(this, "Login Success!!!", Toast.LENGTH_SHORT).show();
+
+                Intent intentHomepage = new Intent(this, homePage.class);
+                startActivity(intentHomepage);
             }
         });
 

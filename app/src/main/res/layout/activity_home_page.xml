@@ -7,20 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".homePage">
 
-    <android.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/app_name"
-            app:srcCompat="@drawable/bluejack" />
-
-
-    </android.widget.Toolbar>
 
 </LinearLayout>
