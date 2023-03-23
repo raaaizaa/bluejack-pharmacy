@@ -31,11 +31,9 @@ public class loginPage extends AppCompatActivity {
         goToRegister = findViewById(R.id.goToRegisterButton);
         login = findViewById(R.id.loginButton);
 
-        goToRegister.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openRegisterPage();
-            }
+        goToRegister.setOnClickListener(e -> {
+            Intent intent = new Intent(this, registerPage.class);
+            startActivity(intent);
         });
 
         login.setOnClickListener(e -> {
@@ -56,11 +54,6 @@ public class loginPage extends AppCompatActivity {
             }
         });
 
-    }
-
-    public void openRegisterPage(){
-        Intent intent = new Intent(this, registerPage.class);
-        startActivity(intent);
     }
 
 }

@@ -10,10 +10,10 @@
 
     <ImageView
         android:id="@+id/medicineImage"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:layout_gravity="center"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="40dp"
         />
 
     <TextView
@@ -53,5 +53,45 @@
         android:padding="24dp"
         android:text="Detailsasdjkfawfbjaslufgaxskjhcansyfgasadsjkflasfhjkasfjkalsjfhsakjlfhdasjklfhjkashgdsalbdaksjlfhsafhasdfhasjkdfhadskjfakjlsdfhaskfhasfjkhasdjkfhdsakfdjkashfdklasfhjdsa"/>
 
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/quantityField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Quantity"
+            android:inputType="number"
+            android:layout_gravity="center" />
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_margin="12dp"
+            android:paddingHorizontal="30dp"
+            />
+
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to cart"
+            android:layout_margin="12dp"
+            android:paddingHorizontal="30dp" />
+
+    </GridLayout>
 
 </LinearLayout>

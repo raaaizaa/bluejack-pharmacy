@@ -12,6 +12,7 @@
 
     <item
         android:title="About Us"
+        android:id="@+id/aboutUsItem"
         app:showAsAction="never"/>
 
     <item
@@ -20,7 +21,7 @@
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/toolbar"
+        android:id="@+id/transactionItem"
         android:title="Transaction"
         app:showAsAction="always"
         android:icon="@drawable/baseline_shopping_cart_24" />
