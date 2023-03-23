@@ -12,6 +12,9 @@
         android:theme="@style/Theme.BluejackPharmacy_Quiz"
         tools:targetApi="31">
         <activity
+            android:name=".clickedCard"
+            android:exported="false" />
+        <activity
             android:name=".homePage"
             android:exported="false" />
         <activity

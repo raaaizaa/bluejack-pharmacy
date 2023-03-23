@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.Spinner;
 
 import java.util.Vector;
 
@@ -22,11 +25,13 @@ public class homePage extends AppCompatActivity {
 
     RecyclerView medicinesRV;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        // RecyclerView nya:
         medicines = new Vector<>();
         medicines.add(new medicine("Decolgen", "Darya Varia Laboratoria", "Rp5.000,00", imageList[2]));
         medicines.add(new medicine("Tolak Angin Cair", "Sido Muncul", "Rp20.000,00", imageList[1]));
@@ -39,6 +44,7 @@ public class homePage extends AppCompatActivity {
         medicinesRV.setAdapter(adapter);
 
         medicinesRV.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
     @Override
